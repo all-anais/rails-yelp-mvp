@@ -1,0 +1,12 @@
+<h1>WELCOME TO YOUR RESTAURANT LIST</h1>
+
+<div class = "container text-center">
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+    <div class = "container text-center">
+      <li><%= restaurant.name %> - <%= restaurant.address %> - <%= restaurant.category %>
+      <%= link_to "+", restaurant_path(restaurant), class: "btn btn-primary btn-sm" %></li>
+    </div>
+    <% end %>
+  </ul>
+</div>
